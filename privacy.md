@@ -1,1 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>InnerXCode — Privacy Policy</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif; max-width: 760px; margin: 40px auto; padding: 0 20px; color: #1a1a1a; line-height: 1.6; }
+  h1 { font-size: 2em; margin-bottom: 0.2em; }
+  h2 { margin-top: 1.8em; color: #0a3a8a; }
+  h3 { margin-top: 1.2em; }
+  p, li { font-size: 16px; }
+  .muted { color: #666; font-size: 14px; }
+  code { background: #f3f3f3; padding: 2px 6px; border-radius: 4px; font-size: 14px; }
+  a { color: #0a66d6; }
+</style>
+</head>
+<body>
 
+<h1>InnerXCode — Privacy Policy</h1>
+<p class="muted">Last updated: 16 May 2026</p>
+
+<p>InnerXCode ("we", "us", "the app") is published by E-Gnite Link AI Systems. This Privacy Policy explains what data the InnerXCode mobile application collects, how it is processed, and the choices you have. We are committed to keeping the data we collect to the absolute minimum needed for the app to function.</p>
+
+<h2>1. Summary (the short version)</h2>
+<ul>
+  <li>The vast majority of processing happens <strong>on your device</strong>. Sensor data is analysed locally and discarded.</li>
+  <li><strong>Raw microphone audio is never recorded, stored, or transmitted.</strong> Only momentary numerical features (e.g. pitch, pace, volume) are extracted in milliseconds and discarded.</li>
+  <li><strong>Raw camera frames are never stored or transmitted.</strong> The camera is only used while Mirror Mode is open and only for on-device facial-expression signal extraction.</li>
+  <li>You can export or delete all your data from Settings → Data &amp; Privacy at any time.</li>
+  <li>Every sensor is opt-in. You can revoke any permission at any time from your device's system settings.</li>
+</ul>
+
+<h2>2. Data We Collect</h2>
+
+<h3>2.1 Account data (only if you sign up)</h3>
+<ul>
+  <li><strong>Email address</strong> — to create and authenticate your account.</li>
+  <li><strong>Display name</strong> (optional) — shown inside the app only.</li>
+  <li><strong>Password</strong> — hashed by Firebase Authentication using industry-standard scrypt. We never see your plain-text password.</li>
+</ul>
+<p>Account data is processed by <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Firebase Authentication</a> on our behalf.</p>
+
+<h3>2.2 On-device sensor signals</h3>
+<p>To detect cognitive patterns (focus, energy, stress, mood, repetition loops), the app processes the following streams on your device. Each stream is opt-in:</p>
+<ul>
+  <li><strong>Microphone metadata</strong> — pitch, cadence, and volume features. No audio is recorded, no transcript is generated, no audio leaves the device.</li>
+  <li><strong>Device motion &amp; activity</strong> — accelerometer / gyroscope summaries used to estimate agitation and movement rhythm.</li>
+  <li><strong>App usage timing</strong> — durations between app switches, used to estimate task-switching frequency. We do not read the contents of other apps.</li>
+  <li><strong>Touch &amp; gesture timing</strong> — tap rhythm and swipe velocity within InnerXCode only. We never inspect what you type.</li>
+  <li><strong>Ambient light</strong> — light-sensor readings for environment detection.</li>
+  <li><strong>Front camera — Mirror Mode only</strong> — analyses facial expression signals while Mirror Mode is open. Frames are processed in memory and discarded; no images are stored or transmitted.</li>
+</ul>
+
+<h3>2.3 Derived data stored on your device</h3>
+<p>The numerical outputs of the analyses above (e.g. "focus 78%", "loop detected: procrastination") are stored locally on your device using the operating system's secure storage (Android Keystore / iOS Keychain). This data does not leave your device unless you choose to export it.</p>
+
+<h3>2.4 Cognitive reflections (Mirror Mode)</h3>
+<p>When you open Mirror Mode, the app sends a short, aggregated summary of your current pattern (e.g. "procrastination loop, focus 38%, time-of-day afternoon") to a Cloud Function we operate, which then calls OpenAI to generate a reflection. <strong>The summary contains no raw audio, no images, no identifiers, and no personal text you have entered.</strong> The summary is not stored after the response is returned.</p>
+
+<h3>2.5 Subscription &amp; purchase data</h3>
+<p>If you start a free trial or purchase a subscription, billing is processed by Google Play Billing. We use <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">RevenueCat</a> to verify subscription status. RevenueCat receives an anonymised app-user identifier — not your email or name.</p>
+
+<h3>2.6 Diagnostics &amp; crash reports</h3>
+<p>To keep the app stable we use <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Crashlytics</a> and Firebase Analytics. These tools collect:</p>
+<ul>
+  <li>Crash stack traces, app version, OS version, device model.</li>
+  <li>Aggregate event counts (screen views, button taps).</li>
+</ul>
+<p>This data is anonymised and does not include the contents of your cognitive readings.</p>
+
+<h2>3. What We <em>Do Not</em> Collect</h2>
+<ul>
+  <li>We do not record or transmit raw microphone audio.</li>
+  <li>We do not store or transmit camera frames.</li>
+  <li>We do not read your messages, emails, calendars, contacts, photos, files, or other apps' content.</li>
+  <li>We do not access your location.</li>
+  <li>We do not sell or rent your data to advertisers or data brokers.</li>
+  <li>We do not run ads inside the app.</li>
+</ul>
+
+<h2>4. How We Use the Data</h2>
+<ul>
+  <li>To compute your live focus, energy, stress, and mood metrics shown on the dashboard.</li>
+  <li>To detect repetitive behavioural patterns (e.g. procrastination loops).</li>
+  <li>To generate Mirror Mode AI reflections based on the aggregated summary you choose to send.</li>
+  <li>To authenticate your account and verify your subscription status.</li>
+  <li>To diagnose crashes and improve app stability.</li>
+</ul>
+<p>We do not use your data to train AI models. We do not profile you for advertising.</p>
+
+<h2>5. Third-Party Processors</h2>
+<table>
+  <tr><th align="left">Service</th><th align="left">Purpose</th><th align="left">Data shared</th></tr>
+  <tr><td>Google Firebase</td><td>Authentication, crash reports, analytics</td><td>Email (auth only), anonymised event data</td></tr>
+  <tr><td>RevenueCat</td><td>Subscription verification</td><td>Anonymous app-user ID, purchase receipts</td></tr>
+  <tr><td>OpenAI (via our Cloud Function)</td><td>Mirror Mode reflection generation</td><td>Aggregated, anonymised pattern summary</td></tr>
+  <tr><td>Google Play Billing</td><td>Payments</td><td>Handled by Google; we receive only purchase tokens</td></tr>
+</table>
+
+<h2>6. Data Storage and Security</h2>
+<ul>
+  <li>On-device data is encrypted using the operating system's secure storage (Android Keystore / iOS Keychain).</li>
+  <li>Network requests use HTTPS with TLS 1.2 or higher.</li>
+  <li>Firebase Authentication uses Google's production security infrastructure.</li>
+  <li>We apply progressive lockouts after repeated failed login attempts.</li>
+  <li>No system is perfectly secure. We follow industry best practices but cannot guarantee absolute security.</li>
+</ul>
+
+<h2>7. Your Rights</h2>
+<p>You can, at any time, from inside the app (Settings → Data &amp; Privacy):</p>
+<ul>
+  <li><strong>Export</strong> all data stored on your device as a JSON file.</li>
+  <li><strong>Delete</strong> all data stored on your device. This is irreversible.</li>
+  <li><strong>Delete your account</strong> entirely (removes the email/auth record on Firebase).</li>
+  <li>Revoke any sensor permission at any time from your device's system settings.</li>
+</ul>
+<p>Depending on your jurisdiction (UK / EU / California / others), you may also have additional rights including access, rectification, restriction, portability, and objection. To exercise these rights contact us at the address below.</p>
+
+<h2>8. Children</h2>
+<p>InnerXCode is not intended for users under 13 (or 16 in the EU/UK, where applicable). We do not knowingly collect data from children. If you believe a child has provided us data, contact us and we will delete it.</p>
+
+<h2>9. International Transfers</h2>
+<p>Firebase and our Cloud Functions are hosted in <code>us-central1</code> (United States). If you use InnerXCode from outside the United States, your account and diagnostic data may be transferred to and processed in the U.S. By using the app you consent to this transfer.</p>
+
+<h2>10. Changes to This Policy</h2>
+<p>We may update this Privacy Policy as the app evolves. Material changes will be notified inside the app and the "Last updated" date at the top will change. Continued use after a change constitutes acceptance.</p>
+
+<h2>11. Contact</h2>
+<p>For any privacy question, request, or complaint:</p>
+<ul>
+  <li>Email: <a href="mailto:support@innerxcode.app">support@innerxcode.app</a></li>
+  <li>Publisher: E-Gnite Link AI Systems</li>
+</ul>
+
+<hr>
+<p class="muted">This document is provided for transparency. It is not a substitute for legal advice. If you operate InnerXCode in a regulated market you should have a qualified lawyer review this policy before launch.</p>
+
+</body>
+</html>
